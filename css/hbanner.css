@@ -1,0 +1,38 @@
+.hbanner{
+	display: flex;
+}
+.hbanner .banner{
+	flex: 1;
+	border: 1px solid lightgray;
+	padding: 0;
+	height: 580px;
+}
+.hbanner h1{
+	color: #FFFFFF;
+	font-size: 40px;
+	line-height: 1.1;
+	font-weight: 600;
+	margin-top: 52px;
+}
+
+.hbanner .banner:nth-child(1){
+	margin: 10px 5px 10px 10px;
+	background-size:100% auto;
+	background-position: left;
+	background-repeat: no-repeat;
+}
+.hbanner .banner:nth-child(2){
+	margin: 10px 10px 10px 5px;
+	background-size:100% auto;
+	background-position: left;
+	background-repeat: no-repeat;
+}
+@media only screen and (max-width:1100px) {
+	.hbanner{
+		display: block;
+	}
+	.hbanner .banner{
+		width: calc(100% - 20px);
+		margin: 10px;
+	}
+}

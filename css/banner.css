@@ -1,0 +1,46 @@
+.banner{
+	width: 100%;
+	height: 692px;
+	background-image: url(https://www.apple.com.cn/v/home/f/images/heroes/iphone-se/hero__dvsxv8smkkgi_mediumtall.jpg);
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-color: #131313;
+	text-align: center;
+}
+.banner h1{
+	color: #fff;
+	font-size: 56px;
+	line-height: 1.07143;
+	font-weight: 600;
+	letter-spacing: -.005rem;
+	font-family: "sf collegiate solid";
+	padding-top: 55px;
+}
+.banner h2{
+	color: #fff;
+	font-size: 27px;
+	line-height: 1.14815;
+	font-weight: 400;
+	letter-spacing: .008rem;
+	font-family: "sf collegiate solid";
+	margin: 6px;
+}
+.banner p{
+	margin: 6px;
+	color: #888;
+	font-size: 17px;
+}
+.banner .link a{
+	font-size: 21px;
+	line-height: 1.38105;
+	font-weight: 400;
+	letter-spacing: .011em;
+	color: #6bf;
+	text-decoration: none;
+}
+.banner .link a:nth-child(2){
+	margin-left: 26px;
+}
+.banner .link a:hover{
+	text-decoration: underline;
+}

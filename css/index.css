@@ -1,0 +1,181 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+.nav{
+	display: flex;
+	height: 44px;
+	background-color: rgba(0,0,0,0.8);
+	justify-content: center;
+	align-items: center;
+}
+.nav a{
+	width: 100px;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+}
+.logo{
+	position: relative;
+	z-index: 1;
+	height: 44px;
+	background-image: url(../img/apple.png);
+	background-size: 32px 32px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.search{
+	height: 44px;
+	background-image: url(../img/search.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.buy{
+	height: 44px;
+	background-image: url(../img/calendar.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.toggleBtn{
+	position: relative;
+	z-index: 1;
+	height: 44px;
+	width: 100px;
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.toggleBtn .line{
+	display: none;
+	height: 1px;
+	width: 18px;
+	background-color: #fff;
+	transition: all 0.5s;
+}
+.toggleBtn .line:nth-child(1){
+	position: absolute;
+	left: clca(50%-9px);
+	top: 14px;
+	transform-origin: left center;
+}
+.toggleBtn .line:nth-child(2){
+	position: absolute;
+	left: clca(50%-9px);
+	top: 27px;
+	transform-origin: left center;
+}
+
+.navPage{
+	background-color: #000;
+	display: flex;
+	height: 0vh;
+	width: 100vw;
+	transition: all 0.8s;
+	overflow: hidden;
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+.navPage .navMain{
+	width: 100%;
+}
+
+@media only screen and (max-width:768px){
+	.toggleBtn{
+		display: flex;
+	}
+	.toggleBtn .line{
+		display: block;
+	}
+	.text,.search{
+		display: none;
+	}
+	.nav{
+		justify-content: space-between;
+	}
+	.nav a{
+		width: 50px;
+	}
+	.logo{
+		order: 2;
+	}
+	.toggleBtn{
+		width: 50px;
+		order: 1;
+	}
+	.buy{
+		order: 3;
+	}
+	#choose:checked~.toggleBtn .line:nth-child(1){
+		transform: rotate(45deg);
+		
+	}
+	#choose:checked~.toggleBtn .line:nth-child(2){
+		transform: rotate(-45deg);
+	}
+	#choose:checked~.navPage{
+		display: flex;
+		/*
+			vw：view width
+			vh：view height
+		*/
+		width: 100vw;
+		height: 100vh;
+		flex-direction: column;
+		position: fixed;
+		left: 0;
+		top: 0;
+		background-color: #000;
+		color: white;
+		padding-top: 54px;
+	}
+	.searchInput{
+		margin: 0 28px 20px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		height: 36px;
+		border-radius: 4px;
+		color: #ccc;
+		background-color: rgba(45,45,45,0.98);
+	}
+	.searchInput .icon{
+		width: 32px;
+		height: 36px;
+		background-image: url(../img/search.png);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	.searchInput input{
+		flex:1;
+		margin: 0 10px;
+		height: 100%;
+		background: transparent;
+		border: none;
+		outline: none;
+		color: white;
+	}
+	hr{
+		border-color: #333;
+	}
+	.navList{
+		margin: 0 28px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+	.navList a{
+		width: 100%;
+		height: 44px;
+		text-align: left;
+		line-height: 44px;
+		color: #fff;
+		border-bottom: 1px solid #333;
+	}
+	.navList a:last-child{
+		border: none;
+	}
+}
